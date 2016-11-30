@@ -1,5 +1,12 @@
 @import "../node_modules/normalize-css/normalize.css";
 
+/* ////////////// VARIABLES ////////////////////// */
+
+@gameboy_gray1: #e0f8d0;
+@gameboy_gray2: #88c070;
+@gameboy_gray3: #306850;
+@gameboy_gray4: #081820;
+
 
 /* ////////////// BOX SIZING FIX //////////////// */
 
@@ -32,12 +39,16 @@ h1,h2,h3,h4,h5 {
 h1 { font-size: 44px }
 h2 { font-size: 27px }
 
-/* ///////////// MAIN LAYOUT - Board ////////// */
+/* ///////////// MAIN LAYOUT - Background ////////// */
 
-#background {
-  background-color: #20B2AA;
-  width:100%;
-  height:100%;
+.site-background {
+  background-color: #2c4c5e;
+  top:0px;
+  bottom:0px;
+  left:0px;
+  right:0px;
+  position:absolute;
+  z-index:-1;
   &:after {
     -moz-box-shadow: inset 0 0 8em 10px #666;  
     -webkit-box-shadow: inset 0 0 8em 10px #666;   
@@ -45,13 +56,50 @@ h2 { font-size: 27px }
     position: absolute;
     top: 0;
     left: 0;
-    width: 100%;
-    height: 100%;
-    z-index: 2;
+    right:0px;
+    bottom:0px;
+    z-index: 0;
     pointer-events: none;
     content: "";
   }
 }
+
+/* ///////////// MAIN LAYOUT - Gameboy body ////////// */
+
+.gameboy {
+    width: 380px;
+    margin:auto;
+    background-color: #18b791;
+    border: 8px solid #484e4d;
+    border-radius: 15px;
+    border-bottom-right-radius: 60px;
+    height: 570px;
+    margin-top: 2em;
+    position: relative;
+    &:after {
+        width: 100%;
+        height: 8px;
+        background-color: #484e4d;
+        z-index:1;
+        position: absolute;
+        top:26px;
+        content: "";
+    }
+}
+
+.gameboy-screen {
+    width: 325px;
+    margin: auto;
+    background-color: #8f8581;
+    border: 8px solid #484e4d;
+    border-radius: 15px;
+    border-bottom-right-radius: 50px;
+    height: 242px;
+    top: 44px;
+    left: 20px;
+    position: absolute;
+}
+
 
 /* ////////////////// UTILS /////////////// */
 

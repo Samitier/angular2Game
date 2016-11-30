@@ -3,8 +3,8 @@ import { Component, OnInit } from '@angular/core';
 @Component({
   selector: 'main-app',
   template: `
-    <h1>HELLO World!</h1>
-    <div>helloworld</div>
+    <gameboy></gameboy>
+    <div class="site-background"></div>
   `
 })
 export class AppComponent implements OnInit { 
