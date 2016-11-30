@@ -7,6 +7,7 @@ import { AppComponent } from './app.component'
 
 import { GameboyComponent } from './gameboy/gameboy.component'
 import { GameboyScreenComponent } from './gameboy/components/gameboy-screen.component'
+import { GameboyLogicService } from './gameboy/services/gameboy-logic.service'
 
 
 @NgModule({
