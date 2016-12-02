@@ -22,6 +22,7 @@ import { GameboyLogicService } from './gameboy/services/gameboy-logic.service'
     GameboyScreenComponent
   ],
   providers: [
+    GameboyLogicService
   ],
   bootstrap: [ AppComponent ]
 })

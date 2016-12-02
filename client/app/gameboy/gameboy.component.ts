@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core'
+import { GameboyLogicService } from './services/gameboy-logic.service'
+import { GameboyAction } from './models/gameboy-actions.model'
 
 @Component({
   selector: 'gameboy',
@@ -10,10 +12,11 @@ import { Component, OnInit } from '@angular/core'
 })
 export class GameboyComponent implements OnInit { 
   
-  constructor(
-   
-  ) { }
+    constructor(
+    
+    ) { }
 
-  ngOnInit() {
-  }
+    ngOnInit() {
+
+    }
 }
