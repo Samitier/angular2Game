@@ -33,9 +33,12 @@ I will put a list of the things that we can do next, to start developing our own
 
 If you want to learn more about all the Angular2 capabilities:
 * Add some routing: make an "About this project" page that shows some Lorem ipsum text.
-* Call a service to fetch the "about us" info from the given NodeJs API. (todo)
-* We are a little bit stupid and we have put a text reversed. Make it readable with a pipe. (todo)
-* Make this "about us" (or anything else you want to put here) draggable with an angular2 directive. (todo)
+* Call a service to fetch the "about us" info from the given NodeJs API (`/api/about`).
+* We are stupid and we have put a text reversed. Make it readable with a pipe.
+* Make this "about us" (or anything else you want to put here) draggable with an angular2 directive.
+
+##How do you want to work?
+We can make teams or work individually. To start, fork this repo and think on what task will you do. When you are finished with it open a pull request and I (or someone else) will review and merge it.
 
 
 
