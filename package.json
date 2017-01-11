@@ -39,7 +39,7 @@
     "dev": "webpack-dev-server --inline --hot --history-api-fallback --no-info --open --colors"
   },
   "engines": {
-    "node": "6.6.2",
-    "npm": "3.9.5"
+    "node": "^6.0.0",
+    "npm": "^3.0.0"
   }
 }
