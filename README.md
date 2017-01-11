@@ -24,16 +24,17 @@ will define all the actions you can do via the keyboard.
 
 ##What to do next?
 I will put a list of the things that we can do next, to start developing our own gameboy:
-* Implement the arrows, a, b, start & select buttons and make them send their action to the screen when they are pressed.
-* Add a speaker and make it emit some sound when certain button of the gameboy is pressed.
-* Add some items, enemies or sprites to the screen, but make the scren component control when and where they appear.
+* Implement the `arrows`, `a`, `b`, `start` & `select` buttons and make them send their action to the screen when they are pressed.
+* Add a `speaker` and make it emit some sound when certain button of the gameboy is pressed.
+* Add some items, enemies or sprites to the screen, but make the screen component control when and where they appear.
+* Add some `game-logic` service that spawn objects randomly.
 * Add a character and make him move with the arrow keys.
-* Add some `game-logic` service that creates some kind of interaction between objects and the character.
+* Add some kind of interaction between objects and the character via `game-logic` service.
 
 If you want to learn more about all the Angular2 capabilities:
-* Add some routing: make an "About this project" page that shows some Lorem ipsum.
-* Call a service to fetch the "about us" info from the API. (todo)
-* Fix some format isues on this text with a filter (todo)
+* Add some routing: make an "About this project" page that shows some Lorem ipsum text.
+* Call a service to fetch the "about us" info from the given NodeJs API. (todo)
+* We are a little bit stupid and we have put a text reversed. Make it readable with a pipe. (todo)
 * Make this "about us" (or anything else you want to put here) draggable with an angular2 directive. (todo)
 
 

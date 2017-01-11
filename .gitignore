@@ -58,3 +58,9 @@ jspm_packages
 !.vscode/tasks.json
 !.vscode/launch.json
 !.vscode/extensions.json
+
+
+*.map
+public/*.bundle.js
+public/index.html
+public/bundle.css

@@ -5,9 +5,7 @@ let minimize = process.argv.indexOf('--minimize') !== -1,
     ExtractTextPlugin = require("extract-text-webpack-plugin"),
     HtmlWebpackPlugin = require('html-webpack-plugin'),
     plugins = [
-        new webpack.optimize.CommonsChunkPlugin({ name: ['app', 'vendor'] }),
         new ExtractTextPlugin("bundle.css", { allChunks: true }),
-        new HtmlWebpackPlugin({ template: './index.html', hash: true })
     ]
 
 if (release || minimize) {
@@ -18,14 +16,10 @@ if (release || minimize) {
 
 module.exports = {
     entry:   {
-        polyfills: './polyfills',
-        vendor:    './vendor',
-        app:       "./app/main",
     },
     output:  {
-        path:       "../public",
+        path:       "./public",
         publicPath: '/',
-        filename:   "[name].js"
     },
     devtool: (release) ? '' : "source-map",
     resolve: {
