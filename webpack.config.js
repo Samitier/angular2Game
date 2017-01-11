@@ -1,6 +1,4 @@
-"use strict";
-let minimize = process.argv.indexOf('--minimize') !== -1,
-    release = process.argv.indexOf('--release') !== -1,
+let release = process.argv.indexOf('--release') !== -1,
     webpack = require('webpack'),
     ExtractTextPlugin = require("extract-text-webpack-plugin"),
     HtmlWebpackPlugin = require('html-webpack-plugin'),
@@ -10,7 +8,7 @@ let minimize = process.argv.indexOf('--minimize') !== -1,
         new HtmlWebpackPlugin({ template: './client/index.html', hash: true })
     ]
 
-if (release || minimize) {
+if (release) {
     plugins.push(new webpack.optimize.UglifyJsPlugin({mangle:false}));
     plugins.push(new webpack.NoErrorsPlugin());
     plugins.push(new webpack.optimize.DedupePlugin());
