@@ -33,7 +33,7 @@
     "webpack": "^1.13.3"
   },
   "scripts": {
-    "heroku-postbuild": "webpack -p --config ./webpack.config.js --progress",
+    "heroku-postbuild": "webpack --release --config ./webpack.config.js --progress",
     "start": "node ./server/main.js",
     "build": "webpack",
     "dev": "webpack-dev-server --inline --hot --history-api-fallback --no-info --open --colors"
