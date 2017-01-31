@@ -32,11 +32,11 @@ I will put a list of the things that we can do next, to start developing our own
 * Add some kind of interaction between objects and the character via `game-logic` service.
 
 If you want to learn more about all the Angular2 capabilities:
-* Add some routing: make an "About this project" page that shows some Lorem ipsum text.
-* Call a service to fetch the "about" info from the given NodeJs API (`/api/about`).
-* We are stupid and we put a text reversed. Fix it with a pipe.
-* Make this info (or anything else you want to put here) draggable with an angular2 directive.
-* Add a small form to send a message to the gameboy devs.
+* Add some routing: make a "Game List" page that shows some Lorem ipsum text.
+* Call a service to fetch the "game list" info from the given NodeJs API (`/api/games`).
+* Draw a list of games from that info.
+* Create a detail view for a game.
+* Add a small form to send a message to the gameboy devs in a "about us" page.
 
 ##How will you work?
 You will make teams or work individually. To start developing, you will fork this repo and ask for a specific task. When you are finished with it you will open a pull request and someone else (probably me) will review your code and merge it.
