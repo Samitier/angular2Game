@@ -3,7 +3,8 @@ let express      = require('express'),
     cookieParser = require('cookie-parser'),
     bodyParser   = require('body-parser'),
     compress     = require('compression'),
-    http         = require('http')
+    http         = require('http'),
+    cors         = require('cors')
 
 let app          = express(),
     port         = parseInt(process.env.PORT, 10) || 3000
@@ -14,10 +15,12 @@ app.use(compress())
 app.use(bodyParser.json())
 app.use(bodyParser.urlencoded({ extended: false }))
 app.use(cookieParser())
+app.use(cors())
 app.use(express.static(path.join(__dirname, '../public'), { maxAge: 31536000 }))
 app.set('port', port)
 
 //// GAMES API ////
+
 let games = [
     { id:"1", title: "Tetris", year: 1984, image: "tetris.jpg", developer: "Bullet-Proof Software, Nintendo", description: "A description text I'm too lazy to write."  },
     { id:"2", title: "Pokémon Red/Blue", year: 1996, image: "pokemon.jpg", developer: "Game Freak", description: "A description text I'm too lazy to write." },
