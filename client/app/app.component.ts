@@ -3,7 +3,7 @@ import { Component, OnInit } from '@angular/core';
 @Component({
   selector: 'main-app',
   template: `
-    <gameboy></gameboy>
+    <router-outlet></router-outlet>
     <div class="site-background"></div>
   `
 })

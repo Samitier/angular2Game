@@ -64,3 +64,4 @@ jspm_packages
 public/*.bundle.js
 public/index.html
 public/bundle.css
+.vscode/launch.json
