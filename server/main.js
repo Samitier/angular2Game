@@ -17,9 +17,25 @@ app.use(cookieParser())
 app.use(express.static(path.join(__dirname, '../public'), { maxAge: 31536000 }))
 app.set('port', port)
 
-//// ROUTE HANDLERS ////
+//// GAMES API ////
+let games = [
+    { id:"1", title: "Tetris", year: 1984, image: "tetris.jpg", developer: "Bullet-Proof Software, Nintendo", description: "A description text I'm too lazy to write."  },
+    { id:"2", title: "Pokémon Red/Blue", year: 1996, image: "pokemon.jpg", developer: "Game Freak", description: "A description text I'm too lazy to write." },
+    { id:"3", title: "Super Mario Land", year: 1989, image: "super-mario-land.jpg", developer: "Nintendo", description: "A description text I'm too lazy to write." },
+    { id:"4", title: "The Legend of Zelda: Link's Awakening", year: 1993, image: "links-awakening.jpg", developer: "Nintendo", description: "A description text I'm too lazy to write." },
+    { id:"5", title: "Wario Land: Super Mario Land 3", year: 1994, image: "wario-land.jpg", developer: "Nintendo", description: "A description text I'm too lazy to write." },
+    { id:"6", title: "Kirby's Dream Land", year: 1992, image: "kirby.jpg", developer: "HAL Laboratory", description: "A description text I'm too lazy to write." }
+]
+app.use('/api/games/:id', (req, res) => {
+    let game = games.find( a => a.id == req.params.id)
+    if(game) res.json(game)
+    else res.status(404).json({ message: "Not found" })
+})
+app.use('/api/games', (req, res) => res.json( games ) )
 
-app.use('/api/about', (req, res) => res.json({ message: "Hello, this is Itequia! We are practising with Angular2.", reversedMessage: "!noos uoy eeS!" }))
+
+//// STATIC FILE SERVING ON NOT FOUND ////
+
 app.use((req, res) => res.sendFile(path.join(__dirname, '../public/index.html')))
 
 //// ERROR HANDLER ////

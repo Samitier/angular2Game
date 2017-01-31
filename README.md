@@ -11,16 +11,16 @@ To run the app for the first time, run `npm i -g webpack webpack-dev-server`, ge
 `npm install && npm run dev`.
 
 ##App explanation
-The idea behind this Angular2 app is creating something together: a GameBoy. Each and everyone of you will implement a part of the gameboy,
-like a button, the screen, the speaker, etc.
+The idea behind this Angular2 app is creating something together: a GameBoy. Each and everyone of you will implement a part of the gameboy, like a button, the screen, the speaker, etc.
+
 We will do this by exploiting component based development: every Gameboy part will be a component, and will comunicate with the other 
 parts via services, events or input/output parameters. What we will accomplish will depend on how well & fast we implement the diferent 
 components and their logic.
 
 ##What do you have?
-You have a very crude gameboy: no buttons, no interaction, nothing. You have an Angular2 app set up, with a `gameboy` component, which has
-a `gameboy-screen`. You also have a `gameboy-logic` service that will act as the "cpu" of the gameboy, and a `gameboy-actions` model that 
-will define all the actions you can do via the keyboard.
+You have a very crude gameboy: no buttons, no interaction, nothing. You have an Angular2 app set up, with a `gameboy` component, which has a `gameboy-screen`. You also have a `gameboy-logic` service that will act as the "cpu" of the gameboy, and a `gameboy-actions` model that will define all the actions you can do via the keyboard.
+
+Finally, you also have a very simple server set up with NodeJs, with a single api endpoint.
 
 ##What to do next?
 I will put a list of the things that we can do next, to start developing our own gameboy:
@@ -32,13 +32,14 @@ I will put a list of the things that we can do next, to start developing our own
 * Add some kind of interaction between objects and the character via `game-logic` service.
 
 If you want to learn more about all the Angular2 capabilities:
-* Add some routing: make an "About this project" page that shows some Lorem ipsum text.
-* Call a service to fetch the "about us" info from the given NodeJs API (`/api/about`).
-* We are stupid and we have put a text reversed. Make it readable with a pipe.
-* Make this "about us" (or anything else you want to put here) draggable with an angular2 directive.
+* Add some routing: make a "Game List" page that shows some Lorem ipsum text.
+* Call a service to fetch the "game list" info from the given NodeJs API (`/api/games`).
+* Draw a list of games from that info.
+* Create a detail view for a game.
+* Add a small form to send a message to the gameboy devs in a "about us" page.
 
-##How do you want to work?
-We can make teams or work individually. To start, fork this repo and think on what task will you do. When you are finished with it open a pull request and I (or someone else) will review and merge it.
+##How will you work?
+You will make teams or work individually. To start developing, you will fork this repo and ask for a specific task. When you are finished with it you will open a pull request and someone else (probably me) will review your code and merge it.
 
 
 

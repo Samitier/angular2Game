@@ -6,13 +6,12 @@ import { GameboyLogicService } from '../services/gameboy-logic.service'
 @Component({
 	selector: 'gameboy-screen',
 	template: `
-    <div class="gameboy-screen">
-	</div>
+    <div class="gameboy-screen"></div>
   `
 })
 export class GameboyScreenComponent implements OnInit {
 
-	subscription: Subscription;
+	subscription: Subscription
 
 	constructor(
 		private _gameboyLogicService: GameboyLogicService
@@ -21,8 +20,7 @@ export class GameboyScreenComponent implements OnInit {
 	ngOnInit() {
 		this.subscription = this._gameboyLogicService.actionAnnounced$
 			.subscribe(action => {
-				console.log(action);
-				//do something with the action
+				console.log(action)
 			}
 		)
 	}
